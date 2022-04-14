@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/myhuman.jpg">
+  <title>
+    My Human - API
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../assets/css/black-dashboard.css" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="../assets/css/simple.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo text-center">
+          <a href="/" class="simple-text logo-normal" style="font-size: large;">
+                     My Human API
+                    </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="/">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="/islami">
+              <i class="tim-icons icon-bulb-63"></i>
+              <p>Islami</p>
+            </a>
+          </li>
+          <li>
+          <li>
+            <a href="/downloader">
+              <i class="tim-icons icon-cloud-download-93"></i>
+              <p>Downloader</p>
+            </a>
+          </li>
+          <li>
+            <a href="/searching">
+              <i class="tim-icons icon-zoom-split"></i>
+              <p>Searching</p>
+            </a>
+          </li>
+          <li>
+            <a href="/entertainment">
+              <i class="tim-icons icon-satisfied"></i>
+              <p>Entertainment</p>
+            </a>
+          </li>
+          <li>
+            <a href="/randomimage">
+              <i class="tim-icons icon-image-02"></i>
+              <p>Random Image</p>
+            </a>
+          </li>
+          <li>
+            <a href="/randomtext">
+              <i class="tim-icons icon-align-center"></i>
+              <p>Random Text</p>
+            </a>
+          </li>
+          <li>
+            <a href="/moviestory">
+              <i class="tim-icons icon-video-66"></i>
+              <p>Movie & Story</p>
+            </a>
+          </li>
+          <li class="active">
+            <a href="/canvas">
+              <i class="tim-icons icon-palette"></i>
+              <p>Canvas</p>
+            </a>
+          </li>
+          <li>
+            <a href="/stalking">
+              <i class="tim-icons icon-book-bookmark"></i>
+              <p>Stalking</p>
+            </a>
+          </li>
+          <li>
+            <a href="/animanga">
+              <i class="tim-icons icon-planet"></i>
+              <p>Animanga</p>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Canvas</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="dropdown nav-item">
+               
+                  
+                
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo">
+                    <img src="../assets/img/anime3.png" alt="Profile Photo">
+                  </div>
+                  <b class="caret d-none d-lg-block d-xl-block"></b>
+                  <p class="d-lg-none">
+                    Contact
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link"><a href="http://wa.me/62895336253039" class="nav-item dropdown-item">WhatsApp</a></li>
+                  <li class="nav-link"><a href="https://t.me/Hans4O4" class="nav-item dropdown-item">Telegram</a></li>
+                  <li class="nav-link"><a href="https://instagram.com/mszpros" class="nav-item dropdown-item">Instagram</a></li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+            
+            <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Canvas Documentation</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class="text-primary">
+                      <tr>
+                        <th>
+                          Feature
+                        </th>
+                        <th>
+                          Method
+                        </th>
+                        <th>
+                        Description
+                        </th>
+                        <th>
+                          Parameter
+                        </th>
+                        <th>
+                        	Status
+                        </th>
+                        <th class="text-center">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    	
+                      
+                      <tr>
+                        <td>
+                          Welcome
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Welcomer Canvas
+                        </td>
+                        <td class="text-center">
+                         name, mem, gcname, picurl, bgurl
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/welcome?name=MyHuman&mem=999&gcname=Hans%20BOT&picurl=https://i.ibb.co/xS9vxrc/MyHuman.jpg&bgurl=https://i.ibb.co/7KD9BSq/20210811-103425.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Good Bye
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Welcomer Good Bye Canvas
+                        	</td>
+                        <td class="text-center">
+                          name, mem, gcname, picurl, bgurl
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/goodbye?name=MyHuman&mem=999&gcname=Hans%20BOT&picurl=https://i.ibb.co/xS9vxrc/MyHuman.jpg&bgurl=https://i.ibb.co/7KD9BSq/20210811-103425.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>                          
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Rank Card
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Rank Card Canvas
+                        	</td>
+                        <td class="text-center">
+                         name, avatar, bgurl, needxp, currxp, level, setrankurl
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/rankcard?name=Hans&avatar=https://i.ibb.co/1s8T3sY/48f7ce63c7aa.jpg&bgurl=https://i.ibb.co/4YBNyvP/images-76.jpg&needxp=1000&currxp=900&level=10&setrankurl=https://i.ibb.co/Wn9cvnv/FABLED.png" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Level Up
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Level Up Canvas
+                        	</td>
+                        <td class="text-center">
+                          avatar
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/levelup?avatar=https://i.ibb.co/1s8T3sY/48f7ce63c7aa.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Wanted
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                      Wanted Bounty Hunter Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/wanted?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Batslap
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Batslap Canvas
+                        	</td>
+                        <td class="text-center">
+                          picurl, picurl2 
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/batslap?picurl=https://i.ibb.co/cQ65zyG/logo.jpg&picurl2=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Beautiful
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Beautiful Image Canvas
+                        	</td>
+                        <td class="text-center">
+                          picurl
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/beautiful?picurl=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Facepalm
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Facepalm Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/facepalm?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Gay
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Gay Effect Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/gay?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Kiss
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Kiss Canvas
+                        	</td>
+                        <td class="text-center">
+                          url, url2
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/kiss?url=https://i.ibb.co/cQ65zyG/logo.jpg&url2=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          RIP
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	RIP Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/rip?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Spank
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Spank Canvas
+                        	</td>
+                        <td class="text-center">
+                          url, url2
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/spank?url=https://i.ibb.co/cQ65zyG/logo.jpg&url2=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Trash
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Trash Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/trash?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Blur
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Blur Effect Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/blur?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Grey Scale
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Grey Scale Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/greyscale?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Sepia
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Sepia Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/sepia?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Delete
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Delete Effect Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/delete?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Color
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Color To Image Canvas
+                        	</td>
+                        <td class="text-center">
+                          color
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/color?color=blue" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                     <tr>
+                        <td>
+                          Trigger
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Create Triggered Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/trigger?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Hitler
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Hitler Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/hitler?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Bed
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	BED Canvas
+                        	</td>
+                        <td class="text-center">
+                          url, url2
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/bad?url=https://i.ibb.co/cQ65zyG/logo.jpg&url2=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Circle
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Image Circle Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/circle?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Jail
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Jail Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/jail?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Dither
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Dither Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/dither?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          Invert
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Invert Canvas
+                        	</td>
+                        <td class="text-center">
+                          url
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/invert?url=https://i.ibb.co/cQ65zyG/logo.jpg" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td>
+                          TTP
+                        </td>
+                        <td class="text-center">
+                          GET
+                        </td>
+                        <td>
+                        	Text To Picture Canvas
+                        	</td>
+                        <td class="text-center">
+                          text
+                        </td>
+                        <td>      	
+                        	<span class="badge badge-warning">Active</span>
+                        	</td>
+                        <td class="text-center">
+                        	<a type="button" href="/api/ttp?text=Hallo" class="text-warning btn-sm btn-icon" rel="nofollow" target="_blank"><i class="tim-icons icon-triangle-right-17"></i></a>             
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          </div>
+        </div>
+     
+        
+          </div>
+   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+  <script> 
+  	$.getJSON("https://api.countapi.xyz/hit/myhuman.herokuapp.com/visits",
+	function(data) {
+	$("#visitor").html(data.value);
+	})
+	</script>
+	<script>
+		
+		$.getJSON("https://api.ipify.org?format=json",
+		function(data) {
+			$("#ipaddres").html(data.ip)
+			})
+			</script>
+</body>
+
+</html>
