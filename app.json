@@ -1,0 +1,7 @@
+{
+  "name": "WebRestApi",
+  "description": "Cuma bantu mereka yang ke pngen bikin api sndiri",
+  "repository": "https://github.com/livydev/tes",
+  "logo": "https://nodejs.org/static/images/logo.svg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation"]
+}
