@@ -9,11 +9,11 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['Lann', 'Lann'];
+var creatorList = ['LivyyS', 'Devilla'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
-var key = ['BetaBotz','BetaBotzkey','betakey','BetaBotz Apikey']; // Apikey Lu Ngab
+var key = ['DevillaAp']; // Apikey Lu Ngab
 
 var ffmpeg = require('fluent-ffmpeg');
 var brainly = require('brainly-scraper-v2');
